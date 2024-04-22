@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='landingpage/css/style.css')}}">
+  <title>Landing Page</title>
+</head>
+
+<body>
+  <h3>Projeto Feedpet</h3> <!--pegar o meta do exemplo foda do replit-->
+  <div id="container">
+    <h1>Disciplina: Desenvolvimento web</h1>
+    <h1>Integrantes:</h1>
+
+    <div class="integrantes">
+      <a id="vini" class="nome-integrantes">Vinicius</a>
+      <a id="amanda" class="nome-integrantes">Amanda</a>
+      <a id="leticia" class="nome-integrantes">Leticia</a>
+      <a id="caio" class="nome-integrantes">Caio</a>
+      <a id="ednaldo" class="nome-integrantes">Ednaldo</a>
+    </div>
+
+    <p>Consiste em um projeto de cadastro, edição e exclusão de usuario dentro de um website, com todo mapeamento de
+      rotas desenvolvido via Flask.</p>
+
+    <div class="form">
+      <form action="#">
+        <div class="input-group">
+          <div class="input-box">
+            <label for="email">E-mail</label>
+            <input id="email" type="email" name="email" placeholder="Digite seu e-mail">
+          </div>
+
+          <div class="input-box">
+            <label for="password">Senha</label>
+            <input id="password" type="password" name="password" placeholder="Digite sua senha">
+          </div>
+        </div>
+
+        <div class="btn-enter">
+          <button><a href="{{ url_for('user.edit_page') }}">Entrar</a></button>
+        </div>
+        <div class="btn-register">
+          <button><a href="{{ url_for('user.register_page') }}">Cadastre-se</a></button>
+        </div>
+      </form>
+    </div>
+
+    <div class="btn-container">
+      <button class="btn-codigo"><a href="#">Codigo fonte</a></button>
+      <button class="btn-referencias"><a href="#">Referências</a></button>
+    </div>
+  </div>
+</body>
+
+</html>
