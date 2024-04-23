@@ -26,6 +26,11 @@ def register_page():
     return render_template('registerpage.html')
 
 
+@user_route.route('/menu')
+def menu_page():
+    return render_template('menupage.html')
+
+
 @user_route.route('/edit')
 def edit_page():
     return render_template('editpage.html')
