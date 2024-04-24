@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='editpage/css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" i
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Feedpet</title>
+</head>
+
+<body>
+    <nav id="sidebar">
+        <div id="sidebar_content">
+            <div id="user">
+                <img src="{{ url_for('static', filename='editpage/images/pets.jpg') }}" id="user_avatar" alt="Avatar">
+                <p id="user_infos">
+                    <i class="fa-solid fa-cat"></i>
+                    <span class="user_description">
+                        Bem vindo ao Feedpet!
+                    </span>
+                </p>
+            </div>
+            <ul id="side_items">
+                <li class="side-item">
+                    <a href="{{ url_for('user.menu_page') }}">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="item-description">
+                            Menu Principal
+                        </span>
+                    </a>
+                </li>
+                <li class="side-item active">
+                    <a>
+                        <i class="fa-solid fa-user"></i>
+                        <span class="item-description">
+                            Dados do Usuario
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <button id="open_btn">
+                <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+        <div id="Logout">
+            <button id="Logout_btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="item-description">
+                    <a href="{{ url_for('landing.landing_page')}}">Logout</a>
+                </span>
+            </button>
+        </div>
+    </nav>
+    <main>
+        <div class="form">
+            <div class="form-title">
+                <div class="title">
+                    <h1>Dados</h1>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-group-left">
+                    <div class="input-box">
+                        <label for="firstame">Primeiro nome</label>
+                        <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome"
+                            required>
+                    </div>
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                    </div>
+                </div>
+                <div class="input-group-right">
+                    <div class="input-box">
+                        <label for="lastname">Sobrenome</label>
+                        <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="number">Celular</label>
+                        <input id="number" type="tel" name="number" placeholder="(xx)xxxxx-xxxx" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="password">Confirme sua senha</label>
+                        <input id="password" type="password" name="Confirmpassword" placeholder="Confirme sua senha"
+                            required>
+                    </div>
+                </div>
+            </div>
+            <div class="continue-button">
+                <button><a href="#">Atualizar dados</a></button>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='editpage/javascript/script.js') }}"></script>
+</body>
+
+</html>
