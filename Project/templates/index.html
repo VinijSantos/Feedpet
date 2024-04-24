@@ -18,49 +18,35 @@
       <ul id="integrantes">
         <li class="side-integrante">
           <div>
-            <image src="{{ url_for('static', filename='landingpage/images/amanda.jpg') }}" class="integrante-img">
-            </image>
-            <!--<span class="nome-integrante">
-              Amanda nseioq
-            </span>*/-->
+            <div class="tooltip">
+                <img src="{{ url_for('static', filename='landingpage/images/amanda.jpg') }}" class="integrante-img" alt="Amanda">
+              <span class="tooltiptext">Amanda Santos</span>
+            </div>
           </div>
-        </li>
-        <li class="side-integrante">
-          <div>
-            <image src="{{ url_for('static', filename='landingpage/images/caio.jpg') }}" class="integrante-img">
-            </image>
-            <!--<span class="nome-integrante">
-              Amanda nseioq
-            </span>*/-->
-          </div>
-        </li>
-        <li class="side-integrante">
-          <div>
-            <image src="{{ url_for('static', filename='landingpage/images/ednaldo.jpg') }}" class="integrante-img">
-            </image>
-            <!--<span class="nome-integrante">
-              Amanda nseioq
-            </span>*/-->
-          </div>
-        </li>
-        <li class="side-integrante">
-          <div>
-            <image src="{{ url_for('static', filename='landingpage/images/leticia.jpg') }}" class="integrante-img">
-            </image>
-            <!--<span class="nome-integrante">
-              Amanda nseioq
-            </span>*/-->
-          </div>
-        </li>
-        <li class="side-integrante">
-          <div>
-            <image src="{{ url_for('static', filename='landingpage/images/vini.jpg') }}" class="integrante-img">
-            </image>
-            <!--<span class="nome-integrante">
-              Amanda nseioq
-            </span>*/-->
-          </div>
-        </li>
+          <li class="side-integrante">
+            <div class="tooltip">
+              <img src="{{ url_for('static', filename='landingpage/images/caio.jpg') }}" class="integrante-img" alt="Caio">
+              <span class="tooltiptext">Caio Silva</span>
+            </div>
+          </li>
+          <li class="side-integrante">
+            <div class="tooltip">
+              <img src="{{ url_for('static', filename='landingpage/images/ednaldo.jpg') }}" class="integrante-img" alt="Ednaldo">
+              <span class="tooltiptext">Ednaldo Pereira</span>
+            </div>
+          </li>
+          <li class="side-integrante">
+            <div class="tooltip">
+              <img src="{{ url_for('static', filename='landingpage/images/leticia.jpg') }}" class="integrante-img" alt="Leticia">
+              <span class="tooltiptext">Letícia Oliveira</span>
+            </div>
+          </li>
+          <li class="side-integrante">
+            <div class="tooltip">
+              <img src="{{ url_for('static', filename='landingpage/images/vini.jpg') }}" class="integrante-img" alt="Vini">
+              <span class="tooltiptext">Vinícius Rodrigues</span>
+            </div>
+          </li>
         <button id="open_btn">
           <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
         </button>
@@ -70,13 +56,19 @@
 
   <div class="container">
     <div class="form-image">
+      <div class="info">
+        <h1>Desenvolvimento Web em Html5, Css, Javascript e Php</h1>
+        <div class="conheca-button">
+          <button><a href="#">Conheça o Pojeto</a></button>
+        </div>
+      </div>
       <img src="">
     </div>
     <div class="form">
       <form action="#">
         <div class="form-header">
           <div class="title">
-            <h1>Efetuar Login</h1>
+            <h1>Efetuar Login!</h1>
           </div>
           <div class="login-button">
             <button><a href="#">Cadastre-se</a></button>
