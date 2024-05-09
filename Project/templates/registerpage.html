@@ -14,16 +14,16 @@
             <img src="{{ url_for('static', filename='registerpage/images/cat.svg')}}">
         </div>
         <div class="form">
-            <form action="#">
-                <div class="form-header">
-                    <div class="title">
-                        <h1>Cadastre-se</h1>
-                    </div>
-                    <div class="login-button">
-                        <button><a href="#">Entrar</a></button>
-                    </div>
+            <div class="form-header">
+                <div class="title">
+                    <h1>Cadastre-se</h1>
                 </div>
+                <div class="login-button" href="{{ url_for('landing.landing_page') }}">
+                    <button><a>Entrar</a></button>
+                </div>
+            </div>
 
+            <form action="#">
                 <div class="input-group">
                     <div class="input-box">
                         <label for="firstame">Primeiro nome</label>
@@ -85,8 +85,8 @@
                     </div>
                 </div>
 
-                <div class="continue-button">
-                    <button><a href="{{ url_for('landing.landing_page') }}">Continuar</a></button>
+                <div class="continue-button" href="{{ url_for('landing.landing_page') }}">
+                    <button><a>Continuar</a></button>
                 </div>
             </form>
 

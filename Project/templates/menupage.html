@@ -55,20 +55,38 @@
         </div>
     </nav>
     <main>
-        <div class="form">
-            <div class="title">
-                <h1>Projeto IOT</h1>
+        <nav>
+            <div class="nav__content">
+                <div class="logo"><a href="#">Projeto</a></div>
+                <label for="check" class="checkbox">
+                    <i class="ri-menu-line"></i>
+                </label>
+                <ul>
+                    <li> <a href="#">Início</a></li>
+                    <li> <a href="#">Jornada</a></li>
+                    <li> <a href="#">Contato</a></li>
+                </ul>
             </div>
-            <div class="image_project">
-                <img src="{{ url_for('static', filename='menupage/images/projeto.jpg') }}" id="projeto_img"
-                    alt="Avatar">
+        </nav>
+        <section class="section">
+            <div class="section__container">
+                <div class="content">
+                    <p class="subtitle">Olá,</p>
+                    <h1 class="title">
+                        Somos a <span>CAVEL<br></span>LTDA
+                    </h1>
+                    <p class="description">
+                        O site foi desenvolvido com o intuito de facilitar a compra do alimentador automático para pets
+                        com a autenticidade e tecnologia da companhia CAVEL LTDA. Nele, o usuário pode realizar seu
+                        cadastro com informações necessárias durante a compra, alterar os dados cadastrados (CRUD) e
+                        conhecer um pouco mais sobre os idealizadores do projeto.
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="{{ url_for('static', filename='menupage/images/alimentador.webp') }}" alt="principal">
+                </div>
             </div>
-            <div class="descricao-projeto">
-                <a>
-                    Esse é o projeto em desenvolvimento na cadeira de IOT, sendo desenvolvido pelos menos
-                    integrantes, com copartipação do professor Giani.
-                </a>
-            </div>
+        </section>
     </main>
 
     <script src="{{ url_for('static', filename='menupage/javascript/script.js') }}"></script>
