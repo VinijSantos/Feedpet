@@ -1,5 +1,8 @@
-from flask import Blueprint, render_template, url_for
-from database.t_users import users_list
+from flask import Blueprint, render_template, url_for, request
+from database.database import db
+from database.models.usuario import User
+
+# from database.t_users import users_list
 
 user_route = Blueprint('user', __name__)
 
@@ -16,9 +19,23 @@ user_route = Blueprint('user', __name__)
 """
 
 
-@user_route.route('/')
-def menu_principal():
-    return "Menu principal do usuario"
+@user_route.route('/', methods=['POST'])
+def inserir_usuario():
+    data = request.form
+
+    User.create(
+        NOME=data['nome'] + ' ' + data['sobrenome'],
+        EMAIL=data['email'],
+        CELULAR=data['celular'],
+        SENHA=data['senha']
+    )
+
+    usuario_registrado = User.select()
+
+    for u in usuario_registrado:
+        print(u.NOME, u.EMAIL, u.CELULAR, u.SENHA)
+
+    return render_template('index.html')
 
 
 @user_route.route('/new')

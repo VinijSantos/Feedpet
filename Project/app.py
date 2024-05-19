@@ -1,10 +1,8 @@
 from flask import Flask
-from routes.landing import landing_route
-from routes.user import user_route
+from config import config_all
 
 app = Flask(__name__)
 
-app.register_blueprint(landing_route)
-app.register_blueprint(user_route, url_prefix='/user')
+config_all(app)
 
 app.run(debug=True)

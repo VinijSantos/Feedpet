@@ -13,50 +13,29 @@
 </head>
 
 <body>
-  <nav id="sidebar">
-    <div id="sidebar-content">
-      <ul id="integrantes">
-        <li class="side-integrante">
-          <div>
-            <div class="tooltip">
-              <img src="{{ url_for('static', filename='landingpage/images/amanda.jpg') }}" class="integrante-img"
-                alt="Amanda">
-              <span class="tooltiptext">Amanda Santos</span>
-            </div>
-          </div>
-        <li class="side-integrante">
-          <div class="tooltip">
-            <img src="{{ url_for('static', filename='landingpage/images/caio.jpg') }}" class="integrante-img"
-              alt="Caio">
-            <span class="tooltiptext">Caio Silva</span>
-          </div>
-        </li>
-        <li class="side-integrante">
-          <div class="tooltip">
-            <img src="{{ url_for('static', filename='landingpage/images/ednaldo.jpg') }}" class="integrante-img"
-              alt="Ednaldo">
-            <span class="tooltiptext">Ednaldo Pereira</span>
-          </div>
-        </li>
-        <li class="side-integrante">
-          <div class="tooltip">
-            <img src="{{ url_for('static', filename='landingpage/images/leticia.jpg') }}" class="integrante-img"
-              alt="Leticia">
-            <span class="tooltiptext">Letícia Oliveira</span>
-          </div>
-        </li>
-        <li class="side-integrante">
-          <div class="tooltip">
-            <img src="{{ url_for('static', filename='landingpage/images/vini.jpg') }}" class="integrante-img"
-              alt="Vini">
-            <span class="tooltiptext">Vinicius Ferreira</span>
-          </div>
-        </li>
-        <button id="open_btn">
-          <i id="open_btn_icon" class="fa-solid fa-chevron-right"></i>
-        </button>
-      </ul>
-    </div>
+  <nav id="sidebar" onmouseover="expandir_sidebar()" onmouseout="retrair_sidebar()">
+    <ul id="integrantes">
+      
+      {% for integrante in lista_integrantes %}
+      <li class="side-integrante">
+        <img src="{{ url_for('static', filename='landingpage/images/' ~ integrante ~ '.jpg') }}" class="integrante-img"
+          alt="{{ integrante }}">
+        <legend class="nome_integrante">
+          {% if integrante == "amanda" %}
+          Amanda Santos
+          {% elif integrante == "caio" %}
+          Caio Silva
+          {% elif integrante == "ednaldo" %}
+          Ednaldo Pereira
+          {% elif integrante == "leticia" %}
+          Leticia do gera
+          {% elif integrante == "vini" %}
+          Vinicius Ferreira
+          {% endif %}
+        </legend>
+      </li>
+      {% endfor %}
+    </ul>
   </nav>
 
   <div class="container">
@@ -76,7 +55,7 @@
             <h1>Efetuar Login!</h1>
           </div>
           <div class="login-button">
-            <button><a href="{{ url_for('user.register_page') }}">Cadastre-se</a></button>
+            <button><a href="{{ url_for('landing.register_page') }}">Cadastre-se</a></button>
           </div>
         </div>
 
@@ -92,12 +71,13 @@
         </div>
 
         <div class="continue-button">
-          <button><a href="{{ url_for('user.menu_page') }}">Entrar</a></button>
+          <button><a href="{{ url_for('landing.menu_page') }}">Entrar</a></button>
         </div>
       </form>
 
     </div>
   </div>
+  <script src="{{ url_for('static', filename='landingpage/js/script.js') }}"></script>
 </body>
 
 </html>

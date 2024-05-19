@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='registerpage/css/style.css')}}">
+    <title>Cadastro Feed Pet</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="{{ url_for('static', filename='registerpage/images/cat.svg')}}">
+        </div>
+        <div class="form">
+            <div class="form-header">
+                <div class="title">
+                    <h1>Usuario Cadastrado com sucesso!</h1>
+                </div>
+                <div class="login-button">
+                    <button><a href="{{ url_for('landing.landing_page')}}">Entrar</a></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
