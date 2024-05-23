@@ -17,6 +17,15 @@ def landing_page():
     return render_template('index.html', lista_integrantes=lista_integrantes)
 
 
+@landing_route.route('/details')
+def detail_page():
+    return render_template('detailpage.html')
+
+@landing_route.route('/login_sucesso')
+def login():
+    return "sucesso"#render_template('detailpage.html')
+
+
 @landing_route.route('/register_sucess', methods=['POST'])
 def inserir_usuario():
     data = request.form
