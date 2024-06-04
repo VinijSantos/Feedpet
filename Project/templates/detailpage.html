@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-    rel="stylesheet"/>
-  <link rel = "stylesheet" href="{{ url_for('static', filename='detailpage/css/style.css')}}" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='detailpage/css/style.css')}}" />
   <title>Feed Pet | Conheça o projeto</title>
 </head>
+
 <body>
   <nav>
     <div class="nav__content">
-      <div class="logo"><a href = "#">Projeto</a></div>
-      <label for ="check" class ="checkbox">
+      <div class="logo"><a href="#">Projeto</a></div>
+      <label for="check" class="checkbox">
         <i class="ri-menu-line"></i>
       </label>
       <ul>
@@ -30,22 +31,39 @@
           Somos a <span>CAVEL<br></span>LTDA
         </h1>
         <p class="description">
-          O site foi desenvolvido com o intuito de facilitar a compra do alimentador automático para pets com a autenticidade e tecnologia da companhia CAVEL LTDA. Nele, o usuário pode realizar seu cadastro com informações necessárias durante a compra, alterar os dados cadastrados (CRUD) e conhecer um pouco mais sobre os idealizadores do projeto. Você já pensou em como poderia melhorar a qualidade de vida do seu animal de estimação, mesmo quando não está em casa? Ou em como poderia ajudar abrigos e ONGs a cuidar melhor dos animais resgatados? Nosso alimentador automático de animais é a solução ideal para essas necessidades, proporcionando benefícios significativos tanto em ambientes domésticos quanto em organizações de proteção animal. Abrigos de animais e ONGs desempenham um papel crucial no cuidado e resgate de animais. No entanto, esses locais muitas vezes enfrentam desafios para garantir a alimentação regular e adequada de todos os animais. Nosso alimentador automático oferece várias vantagens: com ele, os animais recebem suas refeições nos horários certos, independentemente da disponibilidade dos cuidadores, o que é essencial para manter a saúde e o bem-estar dos animais resgatados. Automatizar a alimentação permite que os cuidadores e voluntários concentrem seus esforços em outras atividades importantes, como cuidados médicos, limpeza e socialização dos animais. Além disso, a previsibilidade na alimentação reduz o estresse dos animais, promovendo um ambiente mais tranquilo e saudável no abrigo. Referências:
+          O site foi desenvolvido com o intuito de facilitar a compra do alimentador automático para pets com a
+          autenticidade e tecnologia da companhia CAVEL LTDA. Nele, o usuário pode realizar seu cadastro com informações
+          necessárias durante a compra, alterar os dados cadastrados (CRUD) e conhecer um pouco mais sobre os
+          idealizadores do projeto. Você já pensou em como poderia melhorar a qualidade de vida do seu animal de
+          estimação, mesmo quando não está em casa? Ou em como poderia ajudar abrigos e ONGs a cuidar melhor dos animais
+          resgatados? Nosso alimentador automático de animais é a solução ideal para essas necessidades, proporcionando
+          benefícios significativos tanto em ambientes domésticos quanto em organizações de proteção animal. Abrigos de
+          animais e ONGs desempenham um papel crucial no cuidado e resgate de animais. No entanto, esses locais muitas
+          vezes enfrentam desafios para garantir a alimentação regular e adequada de todos os animais. Nosso alimentador
+          automático oferece várias vantagens: com ele, os animais recebem suas refeições nos horários certos,
+          independentemente da disponibilidade dos cuidadores, o que é essencial para manter a saúde e o bem-estar dos
+          animais resgatados. Automatizar a alimentação permite que os cuidadores e voluntários concentrem seus esforços
+          em outras atividades importantes, como cuidados médicos, limpeza e socialização dos animais. Além disso, a
+          previsibilidade na alimentação reduz o estresse dos animais, promovendo um ambiente mais tranquilo e saudável
+          no abrigo. Referências:
         </p>
         <p>
-          <ul class="referencias"><h1>Referências:</h1>
-            <li><a href="https://youtube.com/playlist?list=PL39zbyHjgjrbsP3xFSc-YH-6FN8WNpglh&si=k-r-Q2XXFNyrsyUL">  - Playlist Programador Python</a></li>
-            <li><a href="https://youtu.be/sSkmBxsaJWg?si=epnq0naOQF9hmX_G">   - Criar Layouts Para Sites</a></li>
-            <li><a href="https://www.youtube.com/watch?v=sSkmBxsaJWg&ab_channel=RodrigoM.S.">   - CSS e HTML</a></li>
-            <li><a href="https://www.youtube.com/watch?v=QOeDE7nPDq0&ab_channel=GustavoNeitzke">    - Criando Formulários</a></li>
-          </ul>
+        <ul class="referencias">
+          <h1>Referências:</h1>
+          <li><a href="https://youtube.com/playlist?list=PL39zbyHjgjrbsP3xFSc-YH-6FN8WNpglh&si=k-r-Q2XXFNyrsyUL"> -
+              Playlist Programador Python</a></li>
+          <li><a href="https://youtu.be/sSkmBxsaJWg?si=epnq0naOQF9hmX_G"> - Criar Layouts Para Sites</a></li>
+          <li><a href="https://www.youtube.com/watch?v=sSkmBxsaJWg&ab_channel=RodrigoM.S."> - CSS e HTML</a></li>
+          <li><a href="https://www.youtube.com/watch?v=QOeDE7nPDq0&ab_channel=GustavoNeitzke"> - Criando Formulários</a>
+          </li>
+        </ul>
         </p>
       </div>
       <div class="image">
         <img src="{{ url_for('static', filename='detailpage/images/alimentador.webp') }}" alt="principal">
       </div>
     </div>
-    
+
     <div class="slider">
       <div class="slides">
         <!--radio buttons-->
@@ -57,26 +75,26 @@
 
         <!--Slide images-->
         <div class="slide first">
-          <img src="{{ url_for('static', filename='detailpage/images/img1.jpeg') }}" alt="Imagem 1"/>
+          <img src="{{ url_for('static', filename='detailpage/images/img1.jpeg') }}" alt="Imagem 1" />
         </div>
         <div class="slide">
-          <img src="{{ url_for('static', filename='detailpage/images/img2.jpeg') }}" alt="Imagem 2"/>
+          <img src="{{ url_for('static', filename='detailpage/images/img2.jpeg') }}" alt="Imagem 2" />
         </div>
         <div class="slide">
-          <img src="{{ url_for('static', filename='detailpage/images/img3.jpeg') }}" alt="Imagem 3"/>
+          <img src="{{ url_for('static', filename='detailpage/images/img3.jpeg') }}" alt="Imagem 3" />
         </div>
         <div class="slide">
-          <img src="{{ url_for('static', filename='detailpage/images/img4.jpeg') }}" alt="Imagem 4"/>
+          <img src="{{ url_for('static', filename='detailpage/images/img4.jpeg') }}" alt="Imagem 4" />
         </div>
-         <!--Fim Slide images-->
+        <!--Fim Slide images-->
 
-          <!--Navigation auto-->
-          <div class="navigation-auto">
-            <div class="auto-btn1"></div>
-            <div class="auto-btn2"></div>
-            <div class="auto-btn3"></div>
-            <div class="auto-btn4"></div>
-          </div>
+        <!--Navigation auto-->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
 
       </div>
 
@@ -89,7 +107,8 @@
       </div>
 
     </div>
-   <script src="{{ url_for('static', filename='detailpage/javascript/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='detailpage/javascript/script.js') }}"></script>
   </section>
 </body>
+
 </html>

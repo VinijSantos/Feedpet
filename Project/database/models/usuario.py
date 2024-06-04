@@ -4,7 +4,7 @@ from database.database import db
 
 class User(Model):
     NOME = CharField()
-    EMAIL = CharField()
+    EMAIL = CharField()  # unique=True)
     CELULAR = CharField()
     SENHA = CharField()
     # GENERO = CharField()

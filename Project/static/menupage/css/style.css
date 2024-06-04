@@ -15,6 +15,7 @@ body {
 
 main {
     padding: 20px;
+    padding-right: 70px;
 }
 
 #sidebar {
@@ -154,7 +155,7 @@ main {
 
 .item-description {
     width: 0px;
-    overflow:hidden;
+    overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     font-size: 14px;
@@ -236,7 +237,7 @@ main {
     --text-dark: #1f2937;
     --text-light: #6b7280;
     --extra-light: #faf5ff;
-    --max-width: 1200px;
+    --max-width: 1800px;
 }
 
 * {

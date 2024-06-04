@@ -4,16 +4,17 @@ from database.models.usuario import User
 
 landing_route = Blueprint('landing', __name__)
 
+lista_integrantes = [
+    "amanda",
+    "caio",
+    "ednaldo",
+    "leticia",
+    "vini"
+]
+
 
 @landing_route.route('/')
 def landing_page():
-    lista_integrantes = [
-        "amanda",
-        "caio",
-        "ednaldo",
-        "leticia",
-        "vini"
-    ]
     return render_template('index.html', lista_integrantes=lista_integrantes)
 
 
@@ -21,9 +22,30 @@ def landing_page():
 def detail_page():
     return render_template('detailpage.html')
 
-@landing_route.route('/login_sucesso')
+
+@landing_route.route('/', methods=["POST"])
 def login():
-    return "sucesso"#render_template('detailpage.html')
+    dados_login = request.form
+
+    try:
+        valid = User.get(
+            User.EMAIL == dados_login['email'],
+            User.SENHA == dados_login['senha']
+        )
+        var_ok = 1
+    except:
+        valid = "Usuario inexistente"
+        var_ok = 0
+
+    print(valid)
+
+    if (var_ok == 1):
+        template = render_template('menupage.html')
+    else:
+        template = render_template(
+            'index.html', lista_integrantes=lista_integrantes
+        )
+    return template
 
 
 @landing_route.route('/register_sucess', methods=['POST'])
