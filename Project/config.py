@@ -1,7 +1,7 @@
 from routes.landing import landing_route
 #from routes.user import user_route
 from database.database import db
-from database.models.usuario import User
+from database.models.usuario import User, Horarios
 
 
 def config_all(app):
@@ -16,4 +16,4 @@ def config_routes(app):
 
 def config_db():
     db.connect()
-    db.create_tables([User])
+    db.create_tables([User, Horarios])

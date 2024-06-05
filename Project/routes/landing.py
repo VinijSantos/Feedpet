@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, url_for, request
+from flask import *
 from database.database import db
 from database.models.usuario import User
 
@@ -48,7 +48,7 @@ def login():
     return template
 
 
-@landing_route.route('/register_sucess', methods=['POST'])
+@landing_route.route('/register_sucess', methods=["POST"])
 def inserir_usuario():
     data = request.form
 
@@ -80,3 +80,44 @@ def menu_page():
 @landing_route.route('/edit')
 def edit_page():
     return render_template('editpage.html')
+
+
+@landing_route.route('/list')
+def list_page():
+    lista_usuarios = User.select()
+    return render_template('listpage.html', lista_usuarios=lista_usuarios)
+
+
+@landing_route.route('/<int:user_id>/delete', methods=['GET'])
+def deletar_user(user_id):
+    usuario = User.get(User.id == user_id)
+    usuario.delete_instance()
+    return redirect("/list")
+
+
+@landing_route.route('/<int:user_id>/edit', methods=['GET', 'POST'])
+def edit_user(user_id):
+    usuario = User.get(User.id == user_id)
+    lista_usuarios = User.select()
+    return render_template('listpage.html',
+                           lista_usuarios=lista_usuarios,
+                           id=usuario.id,
+                           nome_user=usuario.NOME,
+                           email=usuario.EMAIL,
+                           celular=usuario.CELULAR)
+
+
+@landing_route.route('/update', methods=['POST'])
+def update_user():
+    dados = request.form
+    user = User.get(User.id == dados['id'])
+
+    # Atualização dos dados
+
+    user.NOME = dados['nome']
+    user.EMAIL = dados['email']
+    user.CELULAR = dados['celular']
+
+    user.save()
+
+    return redirect("/list")

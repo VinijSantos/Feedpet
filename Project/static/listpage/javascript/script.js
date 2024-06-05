@@ -7,11 +7,4 @@ function redirecionar_url() {
     var url = url_for('landing.landing_page');
     // Redireciona o usuário para a URL
     window.location.href = url;
-};
-
-function deletarUsuario(userId) {
-    if (confirm("Tem certeza que deseja excluir este usuário?")) {
-        var form = document.getElementById('deleteForm' + userId);
-        form.submit();
-    }
 }
